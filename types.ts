@@ -1,9 +1,13 @@
+export interface Bilingual {
+  en: string;
+  hi: string;
+}
 
 export interface StaffMember {
   id: number;
   name: string;
-  designation: string;
-  subject: string;
+  designation: Bilingual;
+  subject: Bilingual;
 }
 
 export interface Result {
@@ -22,4 +26,21 @@ export interface YearResult {
 
 export interface ResultsData {
   [year: string]: YearResult;
+}
+
+export interface NavLink {
+    href: string;
+    label: Bilingual;
+}
+
+export interface Facility {
+    title: Bilingual;
+    description: Bilingual;
+    imageUrl: string;
+    icon: string;
+}
+
+export interface GalleryImage {
+    src: string;
+    alt: Bilingual;
 }

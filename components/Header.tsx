@@ -1,6 +1,6 @@
-
 import React, { useState } from 'react';
-import { schoolName, schoolAddress, navLinks } from '../constants';
+import { schoolInfo, navLinks } from '../constants';
+import { useLanguage } from '../contexts/LanguageContext';
 
 const UPGovLogo: React.FC = () => (
     <svg className="w-16 h-16 text-gray-700" fill="none" viewBox="0 0 100 100" stroke="currentColor">
@@ -18,8 +18,31 @@ const SchoolLogo: React.FC = () => (
     </svg>
 );
 
+const LanguageSwitcher: React.FC = () => {
+    const { language, toggleLanguage } = useLanguage();
+    
+    return (
+        <div className="flex items-center space-x-2">
+             <span className={`font-semibold text-sm ${language === 'en' ? 'text-orange-500' : 'text-gray-500'}`}>EN</span>
+            <button
+                onClick={toggleLanguage}
+                className="relative inline-flex items-center h-6 rounded-full w-11 transition-colors bg-gray-300 focus:outline-none"
+                aria-label="Toggle Language"
+            >
+                <span
+                    className={`inline-block w-4 h-4 transform bg-white rounded-full transition-transform ${
+                    language === 'hi' ? 'translate-x-6' : 'translate-x-1'
+                    }`}
+                />
+            </button>
+            <span className={`font-semibold text-sm ${language === 'hi' ? 'text-orange-500' : 'text-gray-500'}`}>HI</span>
+        </div>
+    );
+};
+
 
 const Header: React.FC = () => {
+    const { language } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
 
     const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>, href: string) => {
@@ -37,23 +60,27 @@ const Header: React.FC = () => {
             <div className="flex items-center space-x-2 md:space-x-4">
                 <UPGovLogo />
                 <div className="text-center">
-                    <h1 className="text-sm md:text-xl font-bold text-orange-600">{schoolName}</h1>
-                    <p className="text-xs md:text-base text-gray-600">{schoolAddress}</p>
-                    <p className="text-xs md:text-sm text-gray-500">द्वारा संचालित: समाज कल्याण विभाग, उत्तरप्रदेश, लखनऊ</p>
+                    <h1 className="text-sm md:text-xl font-bold text-orange-600">{schoolInfo.name[language]}</h1>
+                    <p className="text-xs md:text-base text-gray-600">{schoolInfo.address[language]}</p>
+                    <p className="text-xs md:text-sm text-gray-500">{schoolInfo.managedBy[language]}</p>
                 </div>
                 <SchoolLogo />
             </div>
-            <nav className="hidden md:flex space-x-6">
-                 {navLinks.map((link) => (
-                    <a key={link.href} href={link.href} onClick={(e) => handleScroll(e, link.href)} className="text-gray-600 hover:text-orange-500 font-semibold transition-colors duration-300">
-                        {link.label}
-                    </a>
-                ))}
-            </nav>
-            <div className="md:hidden">
-                <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 focus:outline-none">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={!isOpen ? "M4 6h16M4 12h16m-7 6h7" : "M6 18L18 6M6 6l12 12"}></path></svg>
-                </button>
+
+            <div className="flex items-center space-x-4">
+                <nav className="hidden md:flex space-x-6">
+                    {navLinks.map((link) => (
+                        <a key={link.href} href={link.href} onClick={(e) => handleScroll(e, link.href)} className="text-gray-600 hover:text-orange-500 font-semibold transition-colors duration-300">
+                            {link.label[language]}
+                        </a>
+                    ))}
+                </nav>
+                <LanguageSwitcher />
+                <div className="md:hidden">
+                    <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 focus:outline-none">
+                        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={!isOpen ? "M4 6h16M4 12h16m-7 6h7" : "M6 18L18 6M6 6l12 12"}></path></svg>
+                    </button>
+                </div>
             </div>
         </div>
       </div>
@@ -63,7 +90,7 @@ const Header: React.FC = () => {
                 {navLinks.map((link) => (
                     <li key={link.href}>
                         <a href={link.href} onClick={(e) => handleScroll(e, link.href)} className="block text-center py-2 px-4 text-gray-600 hover:bg-orange-500 hover:text-white transition-colors duration-300">
-                            {link.label}
+                            {link.label[language]}
                         </a>
                     </li>
                 ))}
