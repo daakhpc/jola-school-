@@ -35,7 +35,7 @@ export const homeContent = {
         en: 'The school has a total student capacity of 490. It provides free education, uniforms, accommodation, daily necessities, study materials, school attire, sports, and computer facilities to socially and economically weaker children from rural and urban areas.',
         hi: 'विद्यालय की कुल छात्र क्षमता 490 है। यह विद्यालय केवल सामाजिक, आर्थिक दृष्टि से कमजोर व शिक्षा से वंचित, ग्रामीण और शहरी क्षेत्रों के बालको को शिक्षा के साथ-साथ निशुल्क यूनिफार्म, आवास, दैनिक प्रयोग की सभी वस्तुए, अध्ययन लेखन सामग्री, गणवेश, खेलकूद व कम्प्यूटर की सुविधा उपलब्ध कराता है।'
     },
-    imageUrl: './user_upload_0.png'
+    imageUrl: './assets/school-building-main.jpeg'
 };
 
 export const facilitiesContent: Facility[] = [
@@ -45,7 +45,7 @@ export const facilitiesContent: Facility[] = [
         en: "Smart classes are conducted for students. Under digital education, modern education is provided to students through projectors, a tab lab, and a computer lab.",
         hi: "छात्रों हेतु स्मार्ट क्लास संचालित की जाती है। डिजिटल शिक्षा के अंतर्गत छात्रों को प्रोजेक्टर, टैब लैब एवं कंप्यूटर लैब में आधुनिक शिक्षा प्रदान की जाती है।"
     },
-    imageUrl: "./user_upload_4.png",
+    imageUrl: "./assets/digital-smart-class.jpeg",
     icon: "smartClass"
   },
   {
@@ -54,7 +54,7 @@ export const facilitiesContent: Facility[] = [
         en: "The classrooms are well-ventilated and equipped with electricity, fans, and lights, providing a comfortable and conducive learning environment.",
         hi: "कक्षाएं हवादार, विद्युत्, पंखे, बत्ती युक्त हैं। सीखने के लिए एक आरामदायक और अनुकूल वातावरण प्रदान करती हैं।"
     },
-    imageUrl: "./user_upload_7.png",
+    imageUrl: "./assets/ventilated-classroom.jpeg",
     icon: "classrooms"
   },
   {
@@ -63,7 +63,7 @@ export const facilitiesContent: Facility[] = [
         en: "A library is available to cultivate the habit of reading books and to enhance knowledge among students.",
         hi: "छात्रों में किताबें पढ़ने की आदत को विकसित करने एवं ज्ञानवर्धन के लिए पुस्तकालय की व्यवस्था है।"
     },
-    imageUrl: "./user_upload_9.png",
+    imageUrl: "./assets/students-in-library.jpeg",
     icon: "library"
   },
   {
@@ -72,7 +72,7 @@ export const facilitiesContent: Facility[] = [
         en: "The school has well-equipped laboratories for Biology, Physics, and Chemistry.",
         hi: "विद्यालय में जीव विज्ञान, भौतिक विज्ञान, रसायन विज्ञान प्रयोगशाला की व्यवस्था है।"
     },
-    imageUrl: "./user_upload_11.png",
+    imageUrl: "./assets/science-laboratory.jpeg",
     icon: "laboratory"
   },
   {
@@ -81,7 +81,7 @@ export const facilitiesContent: Facility[] = [
         en: "As the school is residential, a separate hostel built within the school premises is available for boys. The total capacity of the hostel is 490.",
         hi: "विद्यालय का स्वरूप आवासीय होने के कारण विद्यालय में निर्मित छात्रावास पृथक रूप से बालको के लिए उपलब्ध है। छात्रावास की कुल क्षमता 490 हैं।"
     },
-    imageUrl: "./user_upload_15.png",
+    imageUrl: "./assets/school-hostel-building.jpeg",
     icon: "residential"
   },
   {
@@ -90,7 +90,7 @@ export const facilitiesContent: Facility[] = [
         en: "A well-organized mess facility is ensured as per the prescribed menu. All students dine together in the dining hall of the mess.",
         hi: "विद्यालय में निर्धारित मेन्यू के अनुसार सुव्यवस्थित मेस व्यवस्था सुनिश्चित है। सभी छात्र-छात्राएं भोजनालय के डाइनिंग हाल में ही बैठकर भोजन करते हैं।"
     },
-    imageUrl: "./user_upload_16.png",
+    imageUrl: "./assets/mess-hall-dining.jpeg",
     icon: "mess"
   },
 ];
@@ -219,22 +219,22 @@ export const galleryContent = {
 };
 
 export const galleryImages: GalleryImage[] = [
-    { src: './user_upload_1.png', alt: { en: 'Morning Yoga Session', hi: 'प्रात:कालीन योगा' } },
-    { src: './user_upload_3.png', alt: { en: 'Prayer Assembly', hi: 'प्रार्थना स्थल' } },
-    { src: './user_upload_35.png', alt: { en: 'Cultural Program', hi: 'सांस्कृतिक कार्यक्रम' } },
-    { src: './user_upload_13.png', alt: { en: 'Sports Event', hi: 'खेलों का आयोजन' } },
-    { src: './user_upload_24.png', alt: { en: 'Tree Plantation Drive', hi: 'वृक्षारोपण' } },
-    { src: './user_upload_19.png', alt: { en: 'Welcome Ceremony', hi: 'स्वागत समारोह' } },
-    { src: './user_upload_28.png', alt: { en: 'Cleanliness Campaign', hi: 'स्वच्छता अभियान' } },
-    { src: './user_upload_31.png', alt: { en: 'CBSE Program', hi: 'CBSE कार्यक्रम' } },
-    { src: './user_upload_22.png', alt: { en: 'Scout Activities', hi: 'स्काउट' } },
-    { src: './user_upload_42.png', alt: { en: 'Health Check-up', hi: 'स्वास्थ्य परीक्षण' } },
-    { src: './user_upload_39.png', alt: { en: 'Anniversary Celebration', hi: 'जयंतिया समारोह' } },
-    { src: './user_upload_17.png', alt: { en: 'Winter Clothes Distribution', hi: 'शीतकालीन वस्त्रों का वितरण' } },
-    { src: './user_upload_5.png', alt: { en: 'Computer Lab', hi: 'कंप्यूटर लैब' } },
-    { src: './user_upload_10.png', alt: { en: 'Science Project', hi: 'विज्ञान प्रोजेक्ट' } },
-    { src: './user_upload_37.png', alt: { en: 'Independence Day', hi: 'स्वतंत्रता दिवस' } },
-    { src: './user_upload_8.png', alt: { en: 'Classroom learning', hi: 'कक्षा में पढ़ाई' } },
+    { src: './assets/morning-yoga-session.jpeg', alt: { en: 'Morning Yoga Session', hi: 'प्रात:कालीन योगा' } },
+    { src: './assets/prayer-assembly.jpeg', alt: { en: 'Prayer Assembly', hi: 'प्रार्थना स्थल' } },
+    { src: './assets/cultural-program-event.jpeg', alt: { en: 'Cultural Program', hi: 'सांस्कृतिक कार्यक्रम' } },
+    { src: './assets/sports-day-event.jpeg', alt: { en: 'Sports Event', hi: 'खेलों का आयोजन' } },
+    { src: './assets/tree-plantation-drive.jpeg', alt: { en: 'Tree Plantation Drive', hi: 'वृक्षारोपण' } },
+    { src: './assets/new-students-welcome.jpeg', alt: { en: 'Welcome Ceremony', hi: 'स्वागत समारोह' } },
+    { src: './assets/cleanliness-campaign.jpeg', alt: { en: 'Cleanliness Campaign', hi: 'स्वच्छता अभियान' } },
+    { src: './assets/cbse-program.jpeg', alt: { en: 'CBSE Program', hi: 'CBSE कार्यक्रम' } },
+    { src: './assets/scout-activities.jpeg', alt: { en: 'Scout Activities', hi: 'स्काउट' } },
+    { src: './assets/student-health-checkup.jpeg', alt: { en: 'Health Check-up', hi: 'स्वास्थ्य परीक्षण' } },
+    { src: './assets/anniversary-celebration.jpeg', alt: { en: 'Anniversary Celebration', hi: 'जयंतिया समारोह' } },
+    { src: './assets/winter-clothes-distribution.jpeg', alt: { en: 'Winter Clothes Distribution', hi: 'शीतकालीन वस्त्रों का वितरण' } },
+    { src: './assets/computer-lab-students.jpeg', alt: { en: 'Computer Lab', hi: 'कंप्यूटर लैब' } },
+    { src: './assets/science-project-demo.jpeg', alt: { en: 'Science Project', hi: 'विज्ञान प्रोजेक्ट' } },
+    { src: './assets/independence-day-celebration.jpeg', alt: { en: 'Independence Day', hi: 'स्वतंत्रता दिवस' } },
+    { src: './assets/classroom-learning-session.jpeg', alt: { en: 'Classroom learning', hi: 'कक्षा में पढ़ाई' } },
 ];
 
 export const footerContent = {
